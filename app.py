@@ -89,7 +89,7 @@ if st.button("Calculate Success Likelihood", type="primary"):
     probability = pipeline.predict_proba(user_data)[0][1]
     
     # Output display
-    if prediction == 1:
+    if prediction:
         st.success(f"🎉 **High Probability of Success!** The model estimates a **{probability:.2%}** chance of an IPO or Acquisition.")
     else:
         st.warning(f"⚠️ **High Risk Profile.** The model estimates a **{probability:.2%}** chance of an IPO or Acquisition based on these features.")
